@@ -106,23 +106,32 @@ function Navbar() {
                     <ul className="account-list">
                       <li>My Orders</li>
                       <li>Saved Addresses</li>
-                      <li>My Prescriptions</li>
-                      <li>E-Gift Cards</li>
+                      {/* <li>My Prescriptions</li>
+                      <li>E-Gift Cards</li> */}
                       <li><a href="/faq">FAQ's</a></li>
                       <li>Account Privacy</li>
                       <li className="logout-btn">Log Out</li>
                     </ul>
 
                     <div className="account-qr">
-                      <div className="qr-box"></div>
+                      <img
+                        src="src/assets/images/indiamart-qr.png"
+                        alt="IndiaMART QR"
+                        className="qr-box"
+                      />
+
                       <div className="qr-text">
                         <div className="qr-title">
-                          Simple way to<br />get groceries<br />
-                          <span>in minutes</span>
+                          Explore Our<br />Premium Powders<br />
+                          <span>On IndiaMART</span>
                         </div>
-                        <div className="qr-sub">Scan the QR code and download app</div>
+
+                        <div className="qr-sub">
+                          Scan the QR to visit our IndiaMART store page.
+                        </div>
                       </div>
                     </div>
+
                   </div>
                 </>
               ) : (
