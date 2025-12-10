@@ -1,0 +1,380 @@
+/* ---------------------------
+   NAVBAR BASE
+--------------------------- */
+.nav {
+  background: #ffffff;
+  padding: 14px 0;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+/* ---------------------------
+   LOGO
+--------------------------- */
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.nav-logo img:hover {
+  transform: scale(1.05);
+}
+
+
+/* ---------------------------
+   LEFT SECTION (Logo + Divider + Title)
+--------------------------- */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-divider {
+  width: 1.5px;
+  height: 38px;
+  background: #e5e5e5;
+}
+
+.nav-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1001;
+}
+
+.title-main {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #333;
+}
+
+
+/* ---------------------------
+   DROPDOWN (Category Menu)
+--------------------------- */
+.dropdown {
+  position: relative;
+  margin-top: 2px;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  gap: 3px;
+  color: #666;
+  font-weight: 500;
+}
+
+.dropdown-toggle .material-icons-round {
+  font-size: 18px;
+}
+
+
+/* ---------------------------
+   DROPDOWN MENU BOX
+--------------------------- */
+.dropdown-menu {
+  position: absolute;
+  top: 34px;
+  left: 0;
+  width: 230px;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  padding: 12px 0;
+
+  opacity: 0;
+  transform: translateY(10px) scale(0.98);
+  pointer-events: none;
+  transition: 0.25s ease-in-out;
+  z-index: 1002;
+}
+
+/* OPEN STATE */
+.dropdown-menu.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.dropdown-menu p {
+  padding: 12px 18px;
+  margin: 0;
+  font-size: 0.86rem;
+  color: #333;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.dropdown-menu p:hover {
+  background: #f5f5f5;
+  color: var(--primary);
+}
+
+
+/* ---------------------------
+   BACKDROP BLUR (When dropdown or account opens)
+--------------------------- */
+.backdrop-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 500;
+}
+
+
+/* ---------------------------
+   SEARCH BAR
+--------------------------- */
+.nav-search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-wrapper .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 20px;
+}
+
+.search-wrapper input {
+  width: 100%;
+  padding: 12px 18px;
+  padding-left: 48px !important;
+  border-radius: 40px;
+  border: 1.5px solid #e5e5e5;
+  background: #fafafa;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.search-wrapper input:hover {
+  border-color: #ccc;
+}
+
+.search-wrapper input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 5px rgba(10, 173, 10, 0.25);
+}
+
+
+/* ---------------------------
+   RIGHT SECTION
+--------------------------- */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.login-btn,
+.cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #f7f7f7;
+  color: var(--primary);
+}
+
+.cart-btn {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.cart-btn:hover {
+  opacity: 0.9;
+}
+
+
+/* ---------------------------
+   ACCOUNT DROPDOWN (WHEN LOGGED IN)
+--------------------------- */
+.account-wrapper {
+  position: relative;
+}
+
+.account-dropdown {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  width: 270px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: 0.25s;
+  z-index: 1003;
+}
+
+.account-dropdown.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ACCOUNT INFO */
+.account-info {
+  padding: 0 18px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.account-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.account-number {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* ACCOUNT LIST */
+.account-list {
+  margin: 0;
+  padding: 12px 0;
+  list-style: none;
+}
+
+.account-list li {
+  padding: 10px 18px;
+  cursor: pointer;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.account-list li:hover {
+  background: #f7f7f7;
+}
+
+.logout-btn {
+  color: red;
+  font-weight: 600;
+}
+
+/* QR SECTION */
+.account-qr {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px 6px;
+  border-top: 1px solid #eee;
+}
+
+.qr-box {
+  width: 80px;
+  height: 80px;
+  background: #000;
+}
+
+.qr-text .qr-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.qr-title span {
+  color: var(--primary);
+}
+
+.qr-text .qr-sub {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+
+/* ---------------------------
+   RESPONSIVE (Mobile)
+--------------------------- */
+@media (max-width: 768px) {
+
+  .nav-title,
+  .nav-search,
+  .cart-btn,
+  .nav-divider {
+    display: none !important;
+  }
+
+  /* Login text hidden */
+  .login-text {
+    display: none !important;
+  }
+
+  /* Circle icon for mobile */
+  .mobile-user-btn .material-icons-round {
+    font-size: 30px;
+    color: #333;
+    border: 2px solid var(--text-dark);
+    border-radius: 50%;
+    padding: 3px;
+  }
+
+  .mobile-user-btn {
+    padding: 6px;
+    background: none;
+  }
+
+  /* Keep account dropdown usable in mobile */
+  .account-dropdown {
+    right: -20px;
+    width: 260px;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+}
