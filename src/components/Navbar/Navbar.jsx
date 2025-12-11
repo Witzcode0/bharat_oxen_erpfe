@@ -1,4 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
+import logo from "/src/assets/images/logo.png";
+import indiamart_qr from "/src/assets/images/indiamart-qr.png";
+
+<img src={logo} alt="Logo" />
+
 import "./navbar.css";
 
 function Navbar() {
@@ -37,7 +42,7 @@ function Navbar() {
 
             {/* LOGO */}
             <div className="nav-logo">
-              <img src="/src/assets/images/logo.png" alt="Fudvira Logo" />
+              <img src={logo} alt="Fudvira Logo" />
             </div>
 
             {/* DIVIDER */}
@@ -115,7 +120,7 @@ function Navbar() {
 
                     <div className="account-qr">
                       <img
-                        src="src/assets/images/indiamart-qr.png"
+                        src={indiamart_qr}
                         alt="IndiaMART QR"
                         className="qr-box"
                       />
