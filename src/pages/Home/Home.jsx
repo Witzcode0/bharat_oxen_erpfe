@@ -1,33 +1,41 @@
 import React from 'react'
 import "./home.css"
+import hero_fruits from '/src/assets/images/fruits.png'
+import hero_vegs from '/src/assets/images/fruits.png'
+import hero_spices from '/src/assets/images/fruits.png'
+import hero_herbs from '/src/assets/images/fruits.png'
 
 function Home() {
     const adsData = [
-        {
-            title: "Pure Food Powders",
-            subtitle: "Made from high-quality natural ingredients to support everyday nutrition. Perfect for smoothies, bakery use, and healthy meal preparations.",
-            img: "/src/assets/images/fruits.png",
-            bg: "#ffffff"
-        },
-        {
-            title: "Premium Herbal Powders",
-            subtitle: "Carefully processed herbs that maintain maximum freshness and potency. Ideal for boosting immunity, digestion, and overall wellness.",
-            img: "/src/assets/images/vegs.png",
-            bg: "#ffffff"
-        },
-        {
-            title: "Ayurvedic Powders",
-            subtitle: "Traditional ayurvedic formulations crafted with authentic techniques. Supports natural healing, detoxification, and long-term health balance.",
-            img: "/src/assets/images/herbs.png",
-            bg: "#ffffff"
-        },
-        {
-            title: "Authentic Spice Powders",
-            subtitle: "Finely ground spices that bring rich aroma and bold flavor to every dish. Sourced from trusted farms to ensure purity and freshness.",
-            img: "/src/assets/images/spices.png",
-            bg: "#ffffff"
-        }
-    ];
+    {
+        title: "Pure Food Powders",
+        subtitle:
+            "Made from premium natural fruits and grains to support daily nutrition. Ideal for smoothies, shakes, baking mixes, and healthy recipes.",
+        img: hero_fruits,
+        bg: "#F3FFE6"
+    },
+    {
+        title: "Premium Herbal Powders",
+        subtitle:
+            "Processed from fresh and potent herbs to retain maximum medicinal value. Perfect for boosting immunity, digestion, and overall wellness.",
+        img: hero_herbs,
+        bg: "#E9FFE9"
+    },
+    {
+        title: "Ayurvedic Powders",
+        subtitle:
+            "Authentic ayurvedic formulations prepared following traditional techniques. Helps in natural healing, detoxification, and body balance.",
+        img: hero_ayurveda,
+        bg: "#FFF4E5"
+    },
+    {
+        title: "Authentic Spice Powders",
+        subtitle:
+            "Pure, aromatic spices sourced from trusted farms. Enhances flavor, color, and taste in your everyday cooking.",
+        img: hero_spices,
+        bg: "#FFF2E9"
+    }
+];
 
 
     return (
