@@ -1,0 +1,114 @@
+.ads-section {
+  margin: 40px 0;
+}
+
+/* GRID – 2 COLUMNS */
+.ads-grid {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* BEAUTIFUL CARD */
+.ads-card {
+  width: 48%;
+  min-height: 180px;
+  border-radius: 20px;
+  padding: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.ads-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* TEXT CONTENT */
+.ads-content {
+  max-width: 55%;
+}
+
+.ads-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.ads-content p {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+/* BUTTON */
+.ads-btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ads-btn:hover {
+  background: #222;
+}
+
+/* IMAGE – FLOATING EFFECT */
+.ads-img {
+  height: 180px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.ads-card:hover .ads-img {
+  transform: scale(1.08);
+}
+
+/* -------------------------
+   TABLET
+------------------------- */
+@media (max-width: 1024px) {
+  .ads-card {
+    width: 48%;
+  }
+
+  .ads-img {
+    height: 150px;
+  }
+}
+
+/* -------------------------
+   MOBILE
+------------------------- */
+@media (max-width: 768px) {
+  .ads-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .ads-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .ads-content p {
+    font-size: 0.85rem;
+  }
+
+  .ads-img {
+    height: 120px;
+  }
+}

@@ -245,7 +245,7 @@
 .account-dropdown {
   position: absolute;
   right: 0;
-  top: 45px;
+  top: 55px;
   width: 300px;
   background: #fff;
   border-radius: 0 0 12px 12px;
@@ -301,7 +301,6 @@
 }
 
 .logout-btn {
-  color: red;
   font-weight: 600;
 }
 

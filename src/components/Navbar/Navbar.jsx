@@ -105,16 +105,16 @@ function Navbar() {
                   <div className={`account-dropdown ${accountOpen ? "open" : ""}`}>
                     <div className="account-info">
                       <div className="account-heading">My Account</div>
-                      <div className="account-number">8980145007</div>
+                      <div className="account-number">(+XXX) XXXXXXXXXX</div>
                     </div>
 
                     <ul className="account-list">
-                      <li>My Orders</li>
+                      {/* <li>My Orders</li>
                       <li>Saved Addresses</li>
-                      {/* <li>My Prescriptions</li>
+                      <li>My Prescriptions</li>
                       <li>E-Gift Cards</li> */}
-                      <li><a href="/faq">FAQ's</a></li>
-                      <li>Account Privacy</li>
+                      <li>FAQ's</li>
+                      {/* <li>Account Privacy</li> */}
                       <li className="logout-btn">Log Out</li>
                     </ul>
 
