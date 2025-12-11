@@ -1,42 +1,41 @@
 import React from 'react'
 import "./home.css"
 import hero_fruits from '/src/assets/images/fruits.png'
-import hero_vegs from '/src/assets/images/fruits.png'
-import hero_spices from '/src/assets/images/fruits.png'
-import hero_herbs from '/src/assets/images/fruits.png'
+import hero_vegs from '/src/assets/images/vegs.png'
+import hero_spices from '/src/assets/images/spices.png'
+import hero_herbs from '/src/assets/images/herbs.png'
 
 function Home() {
     const adsData = [
     {
-        title: "Pure Food Powders",
+        title: "Natural Fruit Powders",
         subtitle:
-            "Made from premium natural fruits and grains to support daily nutrition. Ideal for smoothies, shakes, baking mixes, and healthy recipes.",
+            "Made from naturally ripened fruits to retain real flavor and nutrition. Ideal for smoothies, desserts, shakes, and instant mixes.",
         img: hero_fruits,
         bg: "#F3FFE6"
     },
     {
-        title: "Premium Herbal Powders",
+        title: "Fresh Vegetable Powders",
         subtitle:
-            "Processed from fresh and potent herbs to retain maximum medicinal value. Perfect for boosting immunity, digestion, and overall wellness.",
-        img: hero_herbs,
-        bg: "#E9FFE9"
-    },
-    {
-        title: "Ayurvedic Powders",
-        subtitle:
-            "Authentic ayurvedic formulations prepared following traditional techniques. Helps in natural healing, detoxification, and body balance.",
-        img: hero_ayurveda,
-        bg: "#FFF4E5"
+            "Prepared from nutrient-rich vegetables while preserving essential vitamins. Perfect for soups, sauces, seasoning blends, and daily cooking.",
+        img: hero_vegs,
+        bg: "#E9F7FF"
     },
     {
         title: "Authentic Spice Powders",
         subtitle:
-            "Pure, aromatic spices sourced from trusted farms. Enhances flavor, color, and taste in your everyday cooking.",
+            "Finely ground from pure spices sourced directly from trusted farms. Enhances aroma, color, and taste in every dish you prepare.",
         img: hero_spices,
         bg: "#FFF2E9"
+    },
+    {
+        title: "Premium Herbal Powders",
+        subtitle:
+            "Crafted from high-quality herbs to support immunity and overall wellness. Ideal for traditional remedies, detox drinks, and daily health routines.",
+        img: hero_herbs,
+        bg: "#E9FFE9"
     }
 ];
-
 
     return (
         <>
