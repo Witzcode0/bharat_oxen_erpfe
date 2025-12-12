@@ -1,0 +1,215 @@
+/* ============================
+   BLINKIT STYLE – PREMIUM FOOTER
+============================ */
+.footer {
+  background: #fff;
+  border-top: 1px solid #eaeaea;
+  padding: 60px 0 35px;
+  color: #2c2c2c;
+  font-size: 0.95rem;
+}
+
+/* ----------------------------
+   TOP SECTION (4 COLUMNS)
+----------------------------- */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  margin-bottom: 70px;
+  flex-wrap: nowrap;
+}
+
+.footer-col {
+  min-width: 180px;
+}
+
+/* Left column always left */
+.footer-col:first-child {
+  text-align: left;
+}
+
+/* Right column always right */
+.footer-col:last-child {
+  text-align: right;
+}
+
+.footer-col:last-child ul li {
+  justify-content: flex-end;
+}
+
+/* ----------------------------
+   COLUMN HEADINGS
+----------------------------- */
+.footer-col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #1a1a1a;
+  position: relative;
+}
+
+/* Title underline */
+.footer-col h4::after {
+  content: "";
+  width: 32px;
+  height: 3px;
+  background: var(--primary);
+  display: block;
+  margin-top: 6px;
+  border-radius: 10px;
+}
+
+/* Right-align underline in last column */
+.footer-col:last-child h4::after {
+  margin-left: auto;
+}
+
+/* ----------------------------
+   LINKS & CONTACT LIST
+----------------------------- */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.footer-col ul li .material-icons-round {
+  font-size: 20px;
+  color: var(--primary);
+}
+
+/* Links */
+.footer-col ul li a {
+  text-decoration: none;
+  font-size: 0.94rem;
+  color: #555;
+  transition: 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+  color: var(--primary);
+}
+
+/* Hover effect for icons */
+.footer-col ul li:hover .material-icons-round {
+  opacity: 0.85;
+}
+
+/* ----------------------------
+   NEWSLETTER SECTION
+----------------------------- */
+.footer-newsletter {
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto 50px;
+}
+
+.footer-newsletter h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* Form */
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 14px;
+  /* border-radius: 8px; */
+  /* border: 1px solid #ddd; */
+  border: none;
+  border-bottom: 1px solid var(--primary);
+  font-size: 0.9rem;
+  transition: 0.25s ease;
+}
+
+.newsletter-form input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 6px rgba(12, 180, 50, 0.18);
+}
+
+.btn-white {
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.25s ease;
+}
+
+.btn-white:hover {
+  opacity: 0.9;
+}
+
+/* Checkbox */
+.checkbox-label {
+  font-size: 0.85rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ----------------------------
+   COPYRIGHT
+----------------------------- */
+.footer-bottom {
+  text-align: center;
+  padding-top: 18px;
+  font-size: 0.85rem;
+  color: #777;
+  border-top: 1px solid #eaeaea;
+}
+
+/* ----------------------------
+   RESPONSIVE STYLES
+----------------------------- */
+
+/* Tablet (2 columns) */
+@media (max-width: 900px) {
+  .footer-top {
+    flex-wrap: wrap;
+    gap: 35px;
+  }
+
+  .footer-col {
+    flex: 1 1 calc(50% - 35px);
+    text-align: left !important;
+  }
+
+  .footer-col:last-child ul li {
+    justify-content: flex-start;
+  }
+
+  .footer-col:last-child h4::after {
+    margin-left: 0;
+  }
+}
+
+/* Mobile (1 column) */
+@media (max-width: 600px) {
+  .footer-col {
+    flex: 1 1 100%;
+    text-align: left !important;
+  }
+}

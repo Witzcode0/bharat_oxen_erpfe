@@ -297,6 +297,7 @@
 
 .account-list li:hover {
   background: #f7f7f7;
+  color:var(--primary)
 }
 
 .logout-btn {
