@@ -1,0 +1,145 @@
+/* --------------------------------------------
+   CATEGORY SECTION (Global-friendly & Polished)
+--------------------------------------------- */
+
+/* outer spacing (uses global spacing) */
+.category-row {
+  padding: 0;
+}
+
+/* make sure content is centered — expect a .container wrapper */
+.category-row > .container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Header: Title Left + See All Right */
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--p-3);
+  margin-top: var(--p-3);
+  margin-bottom: var(--p-3);
+  padding-right: var(--p-2);
+  padding-left: var(--p-2);
+}
+
+.category-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* See All link styled as a clear CTA */
+.see-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+.see-all:hover,
+.see-all:focus {
+  opacity: 0.9;
+  transform: translateX(3px);
+  outline: none;
+}
+
+/* --------------------------------------------
+   PRODUCT GRID — desktop prefers 5 columns
+   but falls back gracefully using minmax()
+--------------------------------------------- */
+.category-product-grid {
+  display: grid;
+  gap: var(--p-4);
+  align-items: start;          /* keep cards aligned at top */
+  padding: 0 var(--p-2);
+  /* prefer 5 equal columns on large screens */
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* keep wrappers flexible so card height is stretchable */
+.category-card-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+/* --------------------------------------------
+   SMART RESPONSIVE RULES
+   - uses explicit breakpoints for large -> small
+   - adds auto-fit fallback for very narrow screens
+--------------------------------------------- */
+
+@media (max-width: 1280px) {
+  .category-product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .category-product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 980px) {
+  .category-product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  /* mobile/tablet: better to use auto-fit with a reasonable min width */
+  .category-product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--p-3);
+  }
+
+  .category-header {
+    padding-left: var(--p-1);
+    padding-right: var(--p-1);
+  }
+
+  .see-all {
+    font-size: 0.9rem;
+    padding: 6px;
+  }
+}
+
+/* very small screens: single column */
+@media (max-width: 420px) {
+  .category-product-grid {
+    grid-template-columns: 1fr;
+    gap: var(--p-3);
+  }
+
+  .category-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--p-2);
+  }
+
+  .see-all {
+    align-self: flex-end;
+  }
+}
+
+/* --------------------------------------------
+   UTILITY: optional centered message when no products
+--------------------------------------------- */
+.category-empty {
+  text-align: center;
+  color: var(--text-light);
+  padding: var(--p-4) 0;
+  font-size: 0.98rem;
+}
