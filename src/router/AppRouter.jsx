@@ -16,7 +16,7 @@ export default function AppRouter() {
       <MainLayout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/category/:id" element={<Category />} />
+          <Route path="/category" element={<Category />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />

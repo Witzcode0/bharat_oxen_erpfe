@@ -1,0 +1,56 @@
+/* Page container */
+.categories-page {
+  padding: 40px 0;
+}
+
+/* Main heading */
+.categories-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Two-column layout */
+.categories-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 120px;  /* Large gap like screenshot */
+  row-gap: 40px;
+}
+
+/* Category title */
+.category-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* Category list */
+.category-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.category-item {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.category-item:hover {
+  color: var(--primary);
+  margin-left: 4px;
+}
+
+/* Responsive: Tablet */
+@media (max-width: 900px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+}
